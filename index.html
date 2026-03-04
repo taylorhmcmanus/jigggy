@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>jigggy.com — Premium Domain For Sale · $250,000</title>
+  <meta name="description" content="jigggy.com is a premium, ultra-memorable 6-letter .com domain available for $250,000. Perfect for tech, music, gaming, crypto, fashion and more."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C8A84B;
+      --gold-light: #E8C86A;
+      --gold-dark: #8B6F2A;
+      --black: #050505;
+      --near-black: #0D0D0D;
+      --dark: #111111;
+      --mid: #1A1A1A;
+      --surface: #202020;
+      --border: rgba(200,168,75,0.18);
+      --text: #F0EDE6;
+      --text-dim: rgba(240,237,230,0.55);
+      --text-faint: rgba(240,237,230,0.28);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* ─── NOISE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.028;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 22px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(5,5,5,0.95), transparent);
+      backdrop-filter: blur(0px);
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      color: var(--gold);
+    }
+
+    .header-price {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+      padding: 7px 16px;
+      border-radius: 2px;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 120px 24px 80px;
+      overflow: hidden;
+    }
+
+    /* Radial glow */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -60%);
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse, rgba(200,168,75,0.09) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+
+    .hero-domain {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(5rem, 16vw, 13rem);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 40%, var(--gold-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.35s forwards;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-tld {
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      opacity: 0.5;
+    }
+
+    .hero-tagline {
+      margin-top: 32px;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-weight: 300;
+      color: var(--text-dim);
+      max-width: 620px;
+      letter-spacing: 0.01em;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.55s forwards;
+    }
+
+    .hero-price-badge {
+      margin-top: 48px;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.7s forwards;
+    }
+
+    .price-line {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.5;
+    }
+
+    .price-value {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--gold-light);
+    }
+
+    .cta-primary {
+      display: inline-block;
+      margin-top: 48px;
+      padding: 18px 56px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: var(--black);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.85s forwards;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .cta-primary:hover::before { opacity: 1; }
+    .cta-primary span { position: relative; z-index: 1; }
+
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(200,168,75,0.35);
+    }
+
+    .hero-scroll {
+      margin-top: 80px;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      opacity: 0;
+      animation: fadeUp 0.9s ease 1.1s forwards;
+    }
+
+    /* ─── DIVIDER ─── */
+    .gold-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+
+    /* ─── STATS STRIP ─── */
+    .stats {
+      background: var(--near-black);
+      padding: 56px 48px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+
+    .stat-item {}
+    .stat-number {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-top: 8px;
+    }
+
+    /* ─── SECTION BASE ─── */
+    section {
+      padding: 100px 48px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .section-body {
+      color: var(--text-dim);
+      font-weight: 300;
+      font-size: 1.05rem;
+      max-width: 600px;
+      line-height: 1.75;
+    }
+
+    /* ─── WHY JIGGGY ─── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+      margin-top: 60px;
+      border: 1px solid var(--border);
+    }
+
+    .why-card {
+      background: var(--near-black);
+      padding: 40px 36px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s ease;
+    }
+
+    .why-card:hover { background: var(--mid); }
+
+    .why-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--gold-dark), var(--gold-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .why-card:hover::before { transform: scaleX(1); }
+
+    .why-icon {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .why-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 0.02em;
+    }
+
+    .why-card p {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+    }
+
+    /* ─── INDUSTRIES ─── */
+    .industries-section {
+      background: var(--near-black);
+      padding: 100px 48px;
+      max-width: 100%;
+    }
+
+    .industries-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      margin-top: 60px;
+    }
+
+    .industry-card {
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 36px 32px;
+      transition: all 0.35s ease;
+      position: relative;
+    }
+
+    .industry-card:hover {
+      border-color: rgba(200,168,75,0.45);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .industry-icon {
+      width: 48px; height: 48px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      background: var(--surface);
+    }
+
+    .industry-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .industry-card .industry-use {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .industry-card p {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+    }
+
+    /* ─── DOMAIN ATTRIBUTES ─── */
+    .attrs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-top: 60px;
+      border: 1px solid var(--border);
+    }
+
+    .attr-row {
+      display: contents;
+    }
+
+    .attr-item {
+      padding: 28px 36px;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    .attr-item:nth-child(even) { border-right: none; }
+
+    .attr-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 6px;
+    }
+
+    .attr-value {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+
+    /* ─── MARQUEE ─── */
+    .marquee-wrap {
+      overflow: hidden;
+      padding: 28px 0;
+      background: var(--mid);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 28s linear infinite;
+      width: max-content;
+    }
+
+    .marquee-item {
+      padding: 0 32px;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      white-space: nowrap;
+      border-right: 1px solid var(--border);
+    }
+
+    .marquee-item.accent { color: var(--gold); }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ─── CTA SECTION ─── */
+    .cta-section {
+      text-align: center;
+      padding: 120px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(ellipse, rgba(200,168,75,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-domain-display {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+      line-height: 1;
+    }
+
+    .cta-sub {
+      font-size: 1.1rem;
+      color: var(--text-dim);
+      font-weight: 300;
+      max-width: 500px;
+      margin: 0 auto 48px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-buy {
+      display: inline-block;
+      padding: 20px 64px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: var(--black);
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-buy::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .btn-buy span { position: relative; z-index: 1; }
+    .btn-buy:hover::before { opacity: 1; }
+    .btn-buy:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 50px rgba(200,168,75,0.4);
+    }
+
+    .btn-email {
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn-email:hover {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--near-black);
+      border-top: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--gold);
+    }
+
+    .footer-note {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      header { padding: 18px 24px; }
+      section { padding: 70px 24px; }
+      .stats { padding: 50px 24px; }
+      .industries-section { padding: 70px 24px; }
+      .cta-section { padding: 80px 24px; }
+      footer { padding: 32px 24px; flex-direction: column; text-align: center; }
+      .attrs { grid-template-columns: 1fr; }
+      .attr-item { border-right: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">jigggy.com</div>
+    <div class="header-price">Available · $250,000</div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <p class="hero-eyebrow">Premium Domain · Now Available</p>
+    <h1 class="hero-domain">jigggy<span class="hero-tld">.com</span></h1>
+    <p class="hero-tagline">A rare, category-defining .com domain with instant recall, global appeal, and infinite brand potential.</p>
+    <div class="hero-price-badge">
+      <span class="price-line"></span>
+      <span class="price-value">$250,000</span>
+      <span class="price-line"></span>
+    </div>
+    <a href="mailto:contactmcmanus@gmail.com?subject=Offer%20for%20jigggy.com&body=Hello%2C%0A%0AI%20am%20interested%20in%20purchasing%20jigggy.com%20for%20%24250%2C000.%0A%0APlease%20let%20me%20know%20how%20to%20proceed.%0A%0AThank%20you." class="cta-primary"><span>Buy This Domain Now</span></a>
+    <p class="hero-scroll">↓ Explore the opportunity</p>
+  </div>
+
+  <!-- STATS STRIP -->
+  <div class="stats">
+    <div class="stat-item reveal">
+      <div class="stat-number">6</div>
+      <div class="stat-label">Characters</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number">.com</div>
+      <div class="stat-label">Premium Extension</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number">∞</div>
+      <div class="stat-label">Brand Applications</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number">1</div>
+      <div class="stat-label">Owner Worldwide</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Unique & Available</div>
+    </div>
+  </div>
+
+  <div class="gold-divider"></div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item accent">Music Platform</span>
+      <span class="marquee-item">Tech Startup</span>
+      <span class="marquee-item accent">Web3 / Crypto</span>
+      <span class="marquee-item">Gaming Brand</span>
+      <span class="marquee-item accent">Streetwear Label</span>
+      <span class="marquee-item">Social Media App</span>
+      <span class="marquee-item accent">AI Product</span>
+      <span class="marquee-item">Dance & Fitness</span>
+      <span class="marquee-item accent">NFT Marketplace</span>
+      <span class="marquee-item">Entertainment</span>
+      <span class="marquee-item accent">Youth Brand</span>
+      <span class="marquee-item">E-Commerce</span>
+      <!-- duplicated for seamless loop -->
+      <span class="marquee-item accent">Music Platform</span>
+      <span class="marquee-item">Tech Startup</span>
+      <span class="marquee-item accent">Web3 / Crypto</span>
+      <span class="marquee-item">Gaming Brand</span>
+      <span class="marquee-item accent">Streetwear Label</span>
+      <span class="marquee-item">Social Media App</span>
+      <span class="marquee-item accent">AI Product</span>
+      <span class="marquee-item">Dance & Fitness</span>
+      <span class="marquee-item accent">NFT Marketplace</span>
+      <span class="marquee-item">Entertainment</span>
+      <span class="marquee-item accent">Youth Brand</span>
+      <span class="marquee-item">E-Commerce</span>
+    </div>
+  </div>
+
+  <!-- WHY JIGGGY -->
+  <section>
+    <p class="section-eyebrow reveal">Why This Domain</p>
+    <h2 class="section-title reveal">The makings of an<br/>iconic internet brand.</h2>
+    <p class="section-body reveal">Short, punchy, and completely unforgettable. jigggy.com carries the rare triple-g pattern that creates an intrinsic visual rhythm — the kind that burns into memory after a single encounter.</p>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-icon">⚡</span>
+        <h3>Instant Recall</h3>
+        <p>The distinctive triple-G spelling creates a visual hook that sticks in the mind. Users who see it once, remember it always — the holy grail of brand naming.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">🌍</span>
+        <h3>Global Phonetics</h3>
+        <p>Pronounced effortlessly in virtually every language. Short, vowel-rich, rhythmic — it crosses cultural and linguistic barriers with zero friction.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">🔑</span>
+        <h3>Premium .com</h3>
+        <p>The .com extension remains the gold standard of digital real estate. There is no substitute. Credibility, trust, and SEO authority come built in.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">🎨</span>
+        <h3>Endless Creative Latitude</h3>
+        <p>Jigggy carries no fixed meaning — it's a blank canvas. You define what it stands for. That creative freedom is extraordinarily rare in today's domain landscape.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">🔗</span>
+        <h3>Short-Form Friendly</h3>
+        <p>In the era of social handles, QR codes, and 10-second attention spans, six characters is a competitive superpower. Links stay clean. Branding stays tight.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">📈</span>
+        <h3>Investment-Grade Asset</h3>
+        <p>Premium short .com domains have consistently appreciated in value. jigggy.com is not just a business tool — it's a store of digital value that grows over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOMAIN ATTRIBUTES -->
+  <section style="padding-top: 0;">
+    <p class="section-eyebrow reveal">Domain Specifications</p>
+    <h2 class="section-title reveal">The technical facts.</h2>
+    <div class="attrs reveal">
+      <div class="attr-item">
+        <div class="attr-label">Domain</div>
+        <div class="attr-value">jigggy.com</div>
+      </div>
+      <div class="attr-item">
+        <div class="attr-label">Extension</div>
+        <div class="attr-value">.com (Global Standard)</div>
+      </div>
+      <div class="attr-item">
+        <div class="attr-label">Character Count</div>
+        <div class="attr-value">6 Letters</div>
+      </div>
+      <div class="attr-item">
+        <div class="attr-label">Asking Price</div>
+        <div class="attr-value">$250,000 USD</div>
+      </div>
+      <div class="attr-item">
+        <div class="attr-label">Transfer Method</div>
+        <div class="attr-value">Escrow / Registrar Push</div>
+      </div>
+      <div class="attr-item">
+        <div class="attr-label">Status</div>
+        <div class="attr-value">Available Now</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <div class="industries-section">
+    <div class="industries-inner">
+      <p class="section-eyebrow reveal">Industry Fit</p>
+      <h2 class="section-title reveal">One domain.<br/>A universe of opportunity.</h2>
+      <p class="section-body reveal">jigggy.com is one of those rare names that doesn't belong to one category — it belongs to every category that values energy, originality, and attitude.</p>
+
+      <div class="industries-grid">
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">🎵</div>
+          <div class="industry-use">Music & Audio</div>
+          <h3>Music Platform or Label</h3>
+          <p>Launch a streaming platform, record label, DJ collective, or music discovery app. The name pulses with rhythm — it was practically born for music.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">🎮</div>
+          <div class="industry-use">Gaming & Esports</div>
+          <h3>Game Studio or Esports Brand</h3>
+          <p>Build a game around the name, power an esports team, or launch a gaming peripheral brand. jigggy carries the energy and edge the gaming world lives for.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">₿</div>
+          <div class="industry-use">Crypto & Web3</div>
+          <h3>Crypto Exchange or Token</h3>
+          <p>Launch a DeFi protocol, NFT marketplace, meme coin, or Web3 wallet. The name has viral potential baked in — crypto communities will embrace it instantly.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">🤖</div>
+          <div class="industry-use">Technology & AI</div>
+          <h3>AI Product or SaaS Startup</h3>
+          <p>Tech brands built on quirky, invented names dominate the market. Jigggy could be the next-generation AI assistant, SaaS tool, or developer platform people talk about.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">👗</div>
+          <div class="industry-use">Fashion & Streetwear</div>
+          <h3>Streetwear or Lifestyle Brand</h3>
+          <p>Build a fashion brand that stands apart. Short, punchy, bold names define streetwear — from Supreme to Kith. jigggy belongs in that conversation.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">📱</div>
+          <div class="industry-use">Social Media & Apps</div>
+          <h3>Social Platform or App</h3>
+          <p>Short names dominate the app economy. jigggy.com has the character and recall to become a social platform, creator tool, or messaging app with global reach.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">💃</div>
+          <div class="industry-use">Dance & Fitness</div>
+          <h3>Dance, Wellness & Fitness</h3>
+          <p>The word itself moves. A dance academy, workout app, viral dance challenge platform — jigggy is a natural fit for any brand built around movement and joy.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">🎬</div>
+          <div class="industry-use">Entertainment & Media</div>
+          <h3>Content, Film & Media</h3>
+          <p>Production company, YouTube brand, podcast network, or streaming channel — jigggy carries the kind of personality-driven energy that powers content empires.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">🛒</div>
+          <div class="industry-use">E-Commerce & Retail</div>
+          <h3>Online Retail or D2C Brand</h3>
+          <p>A six-character .com gives your e-commerce brand memorability that translates directly into traffic, retention, and word-of-mouth. Priceless in a noisy market.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">🍕</div>
+          <div class="industry-use">Food & Beverage</div>
+          <h3>Food Brand or Restaurant Chain</h3>
+          <p>Fun, bouncy names dominate food marketing. jigggy could power a snack brand, a fast-casual chain, a delivery app, or a viral food product with ease.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">🎪</div>
+          <div class="industry-use">Events & Live Entertainment</div>
+          <h3>Events, Festivals & Live Shows</h3>
+          <p>Festival brand, ticketing platform, event production company — jigggy.com is a name you'd print on a wristband, a stage banner, or a 100,000-person stadium screen.</p>
+        </div>
+
+        <div class="industry-card reveal">
+          <div class="industry-icon">🧠</div>
+          <div class="industry-use">Kids & Education</div>
+          <h3>Children's Brand or EdTech</h3>
+          <p>Playful, energetic, and completely non-threatening — jigggy is a name children will love. A kids' app, animated character, or educational platform built to last.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- INVESTMENT PITCH -->
+  <section>
+    <p class="section-eyebrow reveal">The Investment Case</p>
+    <h2 class="section-title reveal">Premium domains are<br/>finite. Demand is not.</h2>
+    <p class="section-body reveal">Short .com domains are among the scarcest assets in the digital economy. New registrations cannot compete with an established, clean short .com. Hundreds of businesses would benefit from jigggy.com — only one will own it.</p>
+
+    <div class="why-grid" style="margin-top: 50px;">
+      <div class="why-card reveal">
+        <span class="why-icon">🏆</span>
+        <h3>Scarcity Premium</h3>
+        <p>Six-character .coms are nearly gone. You cannot register a new one like this. The supply is permanently fixed while global digital commerce expands every year.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">💼</span>
+        <h3>Immediate Deployment</h3>
+        <p>No development needed to start generating value. The moment you own jigggy.com, your brand equity begins. Redirect traffic, launch a page, build an empire.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">🔒</span>
+        <h3>Secure Transfer</h3>
+        <p>Domain transfer is handled securely through escrow or a trusted registrar. A straightforward, protected transaction for both parties. Your investment is safe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <div class="cta-section">
+    <div class="cta-domain-display reveal">jigggy.com</div>
+    <p class="cta-sub reveal">Don't let this opportunity pass. Premium short domains at this caliber are acquired once in a generation.</p>
+    <div class="cta-buttons reveal">
+      <a href="mailto:contactmcmanus@gmail.com?subject=Offer%20for%20jigggy.com%20-%20%24250%2C000&body=Hello%2C%0A%0AI%20am%20interested%20in%20purchasing%20jigggy.com%20for%20the%20listed%20asking%20price%20of%20%24250%2C000.%0A%0APlease%20contact%20me%20to%20proceed%20with%20the%20transaction.%0A%0AName%3A%20%0ACompany%3A%20%0APhone%3A%20%0A%0AThank%20you." class="btn-buy"><span>Buy Now — $250,000</span></a>
+      <a href="mailto:contactmcmanus@gmail.com?subject=Inquiry%20about%20jigggy.com" class="btn-email">contactmcmanus@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">jigggy.com</div>
+    <div class="footer-note">© 2025 jigggy.com · All rights reserved · Premium Domain For Sale</div>
+    <div class="footer-note">Inquiries: contactmcmanus@gmail.com</div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
